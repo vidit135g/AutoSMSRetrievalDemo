@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "474301945704",
+    "firebase_url": "https://sample-b1721.firebaseio.com",
+    "project_id": "sample-b1721",
+    "storage_bucket": "sample-b1721.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474301945704:android:92eca666c82d879cb468dd",
+        "android_client_info": {
+          "package_name": "com.absolute.authenticator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "474301945704-i7s3idpufs0q1j1s1f2nfng3jtqj6tpo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaDNlDGjFN1189epdTlwwxFRMZj1r5nco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "474301945704-i7s3idpufs0q1j1s1f2nfng3jtqj6tpo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

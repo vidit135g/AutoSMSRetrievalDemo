@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerifyActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter OTP we've sent you on"
+        android:textSize="18sp"
+        android:id="@+id/intro"
+        android:layout_marginTop="30dp"
+        android:typeface="monospace"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        android:clickable="true"
+        android:layout_above="@+id/introdesc"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Experience all the new features."
+        android:textSize="12sp"
+        android:id="@+id/introdesc"
+        android:layout_marginTop="10dp"
+        android:typeface="monospace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intro"
+        android:layout_marginLeft="20dp"
+        android:clickable="true"
+        android:textColor="@color/black"/>
+
+
+
+
+
+
+
+    <com.mukesh.OtpView
+        android:id="@+id/otp_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:inputType="number"
+        android:itemBackground="@color/colorPrimary"
+        android:textColor="@color/black"
+        app:OtpItemCount="6"
+        app:OtpLineColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/introdesc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:OtpViewType="rectangle"
+        android:layout_margin="20dp"
+        android:cursorVisible="true"
+        app:OtpState_filled="false"
+        app:OtpCursorColor="@color/black"
+        android:enabled="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        />
+
+
+
+
+    <FrameLayout
+        android:id="@+id/check_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:background="@color/black"
+        android:clickable="true"
+        app:layout_constraintTop_toBottomOf="@id/otp_view"
+        android:layout_margin="20dp"
+        android:padding="2dp"
+        android:focusable="true">
+
+        <TextView
+            style="@style/StickerPreviewButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:drawablePadding="8dp"
+            android:focusable="false"
+            android:foreground="@android:color/transparent"
+            android:text="Verify" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:typeface="monospace"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check_otp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">authenticator</string>
+    <string name="permission_request_denied">\"denied\"</string>
+    <string name="error_gif">x or y bound size should be at least %1$dpx and file size should be no more than %2$sM</string>
+    <string name="button_sure_default">Done</string>
+    <string name="button_sure">Exit</string>
+    <string name="button_preview">Pin</string>
+    <string name="button_apply">Exit</string>
+</resources>

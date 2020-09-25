@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.absolute.authenticator">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- to set Wallpaper -->
+    <uses-permission android:name="android.permission.SET_WALLPAPER" /> <!-- to show FileOperation progress as a notification -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/ListTheme">
+        <activity
+            android:name=".VerifyActivity"
+            android:noHistory="true"
+            android:theme="@style/ListTheme" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/ListTheme"
+            android:noHistory="true">
+
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/ListTheme"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"
+            android:noHistory="true">
+
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.zhihu.matisse.sample.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public"></meta-data>
+        </provider>
+
+    </application>
+
+</manifest>

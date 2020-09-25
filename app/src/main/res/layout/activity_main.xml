@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Copyright 2017 Zhihu Inc.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  http://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center_vertical"
+            android:text="Media Demo"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            tools:ignore="RtlCompat" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/zhihu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_margin_horizontal"
+            android:layout_marginTop="18dp"
+            app:strokeColor="@color/gyellow"
+            android:layout_marginRight="@dimen/item_margin_horizontal"
+            android:minHeight="56dp"
+            android:text="Photo Viewer"
+            android:textAllCaps="false"
+            android:textColor="@color/gyellow"
+            android:theme="@style/ZhihuOverlay" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dracula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_margin_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="@dimen/item_margin_horizontal"
+            android:minHeight="56dp"
+            android:text="All Media Viewer"
+            app:strokeColor="@color/ggreen"
+            android:textAllCaps="false"
+            android:textColor="@color/ggreen"
+            android:theme="@style/DraculaOverlay" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/only_gif"
+            app:strokeColor="@color/gred"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_margin_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="@dimen/item_margin_horizontal"
+            android:layout_marginBottom="32dp"
+            android:minHeight="56dp"
+            android:text="Gif Viewer"
+            android:textAllCaps="false"
+            android:textColor="@color/gred"
+            android:theme="@style/ZhihuOverlay" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llEmptyView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/empty_list"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            android:scaleType="centerCrop"
+            app:lottie_rawRes="@raw/empty"
+            app:lottie_loop="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="Select one of the above pickers."
+            android:textColor="@color/ggray"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:visibility="gone"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"/>
+
+
+
+
+
+</LinearLayout>
